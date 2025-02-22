@@ -8,6 +8,7 @@ def navbar() -> rx.Component:
     return rx.hstack(
         rx.box(
             rx.text("StephDEV", color=TextColor.HEADER.value),
+            align="left",
             style=styles.navbar_title_style
         ),
         rx.hstack(

@@ -7,14 +7,14 @@ import link_bio.styles.styles as styles
 from link_bio.styles.styles import Size as Size
 from link_bio.views.sponsors.sponsor import sponsor
 from link_bio.views.medium.medium import medium
+from link_bio.views.content.content import content
 
 class State(rx.State):
     pass
 
 def index()-> rx.Component:
     return rx.box(
-        navbar(), 
-        
+        navbar(),
         rx.center(
             rx.vstack(
                 header(),
@@ -33,6 +33,14 @@ def index()-> rx.Component:
                 
             ),
          ),
+         rx.center(
+             rx.vstack(
+                content(),
+                height= "50%",  # Ajusta la altura del componente medium
+                width="100%",  # Asegúrate de que ocupe todo el ancho de la página
+                max_width="100%",
+            )
+         ),
         rx.center(
             rx.vstack(
               links(),
@@ -41,6 +49,7 @@ def index()-> rx.Component:
                 margin_y=Size.BIG.value
             ),  
         ),
+      
         footer()
     )
      

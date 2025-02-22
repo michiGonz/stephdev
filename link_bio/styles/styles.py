@@ -60,6 +60,7 @@ button_body_styles = dict(
 
 # link_bio/styles/styles.py
 
+#logo del navbar
 navbar_title_style = {
     "font-size": "24px",
     "font-weight": "bold",
@@ -106,40 +107,34 @@ banner_subtext_style = {
 
 
 banner_description_style = dict(
-    font_size= "18px",
-    font_weight= "normal",
+    font_size = "40px",
+    font_weight = "bold",
     font_family= "'Helvetica Neue', Arial, sans-serif",
-    color="#BBBBBB",
-    margin_bottom= "10px"
+    color="#eeeef3",
+    margin_left = "60px",
+    margin_bottom= "0px"
     
 )
 
 # header banner
 banner_container_style = {
-    "display": "flex",
-    "flex-direction": "column",  # Cambiado a kebab-case
-    "justify-content": "center",  # Centra el contenido verticalmente
-    "background-image":"url('./fondo.png')",  # Cambiado de 'bg' a 'background-image'
-    "background-size": "cover",  # Ajusta la imagen al tamaño del contenedor
-    "background-repeat": "no-repeat",  # Evita que la imagen se repita
-    "background-position": "center",  # Centra la imagen
-    "width": "100%",  # Hace que ocupe todo el ancho
-    "height": "50vh",  # Hace que ocupe toda la altura de la ventana
-    "box-sizing": "border-Box", # Cambiado a kebab-case
-    "color": "#FFFFFF"
+    "background-image": url()"/", # Asegúrate de que la ruta sea correcta
+    "width": "100%"
 }
 
-#descripcion del header (menu del medio) 
+
+#diseno del texto del medium container
 medium_container = {
-    "font-size" : "32px",
+    "font-size" : "15px",
     "font-weight": "bold",
+    "color": "#eeeef3",
     "font-family": "'Helvetica Neue', Arial, sans-serif",
     "margin-left": "50px"
 }
 
 #medium container style(estilo del medium)
 medium_container_style ={
-    "font-family": "'Helvetica Neue', Arial, sans-serif'",
+    "font-family": "'Helvetica Neue', Arial, sans-serif",
     "font-weight": "bold",
     "display": "flex",
     "font-size": "14px",
@@ -147,7 +142,17 @@ medium_container_style ={
     "flex-direction": "row",  
     "justify-content": "center",  # Centra el contenido verticalmente
     "width": "100%",  # Hace que ocupe todo el ancho
-    "height": "20vh",  # Hace que ocupe toda la altura de la ventana
-    "padding": "20px",
+    "height": "10vh",  # Hace que ocupe toda la altura de la ventana
+    "padding": "10px",
     "padding-bottom":"0px"
 }
+
+#estilo de "sobre mi"
+about_me_style = {
+    "padding":"20px",
+    "background-color":"#f0f0f0",
+    "text-align":"center" 
+}
+   
+        
+        

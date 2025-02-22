@@ -7,12 +7,13 @@ import link_bio.styles.styles as styles
 
 def medium() -> rx.Component:
     return rx.hstack(
-        rx.text("3 Years Experience", style=styles.medium_container_style),
-        rx.text("5 Projects Completed", style=styles.medium_container_style),
+        rx.text("3 Years Experience", style=styles.medium_container),
+        rx.text("5 Projects Completed", style=styles.medium_container),
         rx.box(
             rx.hstack(
                 link_icon(
                     "https://github.com/michiGonz",
+                    
                     "/icons/github.svg"      
                 ),
                 link_icon(
@@ -25,7 +26,7 @@ def medium() -> rx.Component:
                 ),
                 style={"gap": "20px"}  # Añade espacio entre los iconos
             ),
-            style={"display": "flex", "justify-content": "flex-end", "width": "100%"}  # Alinea los iconos a la derecha
+            style={"display": "flex", "justify-content": "flex-end", "width": "100%", "padding" : "10px"}  # Alinea los iconos a la derecha
         ),
         style=styles.medium_container_style
     )

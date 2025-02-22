@@ -10,10 +10,11 @@ import link_bio.styles.styles as styles
 
 def header() -> rx.Component:
     return rx.section(
-        rx.text("Hi 👋", style=styles.medium_container),
-        rx.text("I'm a", style=styles.medium_container),
-        rx.text("Web Developer", style=styles.medium_container),
-        rx.text("I build things for web", style=styles.medium_container),
+        rx.text("Hi 👋", style=styles.banner_description_style),
+        rx.text("I'm a", style=styles.banner_description_style),
+        rx.text("Web Developer", style=styles.banner_description_style),
+        rx.text("I build things for web", style=styles.banner_description_style
+                ),
             rx.hstack(
                 link_icon(
                     "https://github.com/michiGonz",
