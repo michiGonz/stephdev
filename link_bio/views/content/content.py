@@ -1,5 +1,4 @@
 import reflex as rx
-from link_bio.components.link_icon import link_icon
 from link_bio.styles.styles import Size as Size
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color

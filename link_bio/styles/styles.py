@@ -118,7 +118,9 @@ banner_description_style = dict(
 
 # header banner
 banner_container_style = {
-    "background-image": url()"/", # Asegúrate de que la ruta sea correcta
+    "background-image": "url('/assets/banner.png')", 
+    "background-size": "cover", 
+    "height": "200px",
     "width": "100%"
 }
 
