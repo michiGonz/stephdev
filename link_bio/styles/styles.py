@@ -111,16 +111,17 @@ medium_container = {
 
 #medium container style(estilo del elemento del medio(medium)
 medium_container_style ={
+    "background": "linear-gradient(to right,rgb(206, 162, 204),rgb(59, 12, 58))", #degradado
+    "padding": "5px",
+    "text-align" : "center",
     "font-family": "'Helvetica Neue', Arial, sans-serif",
     "font-weight": "bold",
     "display": "flex",
     "font-size": "14px",
-    "background-color": "#1e0225",
     "flex-direction": "row",  
     "justify-content": "center",  # Centra el contenido verticalmente
     "width": "100%",  # Hace que ocupe todo el ancho
     "height": "15vh",  # Hace que ocupe toda la altura de la ventana
-    "padding": "10px",
     "padding-bottom":"0px"
 }
 
@@ -135,7 +136,7 @@ about_me_style = {
 
 #estilo del texto sobre mi
 about_me_text_style = dict (
-    text_align ="rigth",
+    text_align ="left",
     padding="20px",
 )  
         
