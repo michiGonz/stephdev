@@ -23,8 +23,8 @@ STYLESHEETS =[
 #styles
 
 BASE_STYLE ={
-    "font_family": Font.DEFAULT.value,
-    "background_color": Color.BACKGROUND.value,
+    "font_family": Font.DEFAULT.value, #fuente general
+    "background_color": Color.BACKGROUND.value, #color de fondo general
     rx.button: {
         "width":"100%",
         "height":"100%",
@@ -58,9 +58,8 @@ button_body_styles = dict(
      color=TextColor.BODY.value
 )
 
-# link_bio/styles/styles.py
 
-#logo del navbar
+#estilo del logo del navbar
 navbar_title_style = {
     "font-size": "24px",
     "font-weight": "bold",
@@ -69,6 +68,7 @@ navbar_title_style = {
     "padding": "10px"
 }
 
+#estilo de los links en navbar
 navbar_link_style = {
     "font-size": "16px",
     "font-weight": "normal",
@@ -80,32 +80,7 @@ navbar_link_style = {
     "width": "100px"  # Ajustar el ancho del enlace
 }
 
-
-banner_text_style = dict(
-    font_size = "32px",
-    font_weight="bold",
-    font_family= "'Helvetica Neue', Arial, sans-serif",
-    color= "#FFFFFF",
-    margin_bottom="0px"   
-)
-   
-banner_tytlee_style = {
-   "font-size": "30px",
-    "font-weight": "normal",
-    "font-family": "'Sigmar', cursive'",
-    "color": "#DDDDDD",
-    "margin-bottom": "15px" 
-}
-
-banner_subtext_style = {
-   "font-size": "25px",
-    "font-weight": "normal",
-    "font-family": "'Sigmar', cursive'",
-    "color": "#DDDDDD",
-    "margin-bottom": "10px"  
-}
-
-
+#estilo del texto de la descripcion del banner
 banner_description_style = dict(
     font_size = "40px",
     font_weight = "bold",
@@ -116,14 +91,15 @@ banner_description_style = dict(
     
 )
 
-# header banner
-banner_container_style = {
-    "background-image": "url('/assets/banner.png')", 
-    "background-size": "cover", 
-    "height": "200px",
-    "width": "100%"
-}
-
+# estilo del banner
+banner_container_style = dict (
+    background_image = "url('/banner.png')",
+    background_size = "cover",
+    background_position = "center",
+    height = "50vh",
+    width = "100%"
+    
+)
 
 #diseno del texto del medium container
 medium_container = {
@@ -134,7 +110,7 @@ medium_container = {
     "margin-left": "50px"
 }
 
-#medium container style(estilo del medium)
+#medium container style(estilo del elemento del medio(medium)
 medium_container_style ={
     "font-family": "'Helvetica Neue', Arial, sans-serif",
     "font-weight": "bold",
@@ -144,17 +120,22 @@ medium_container_style ={
     "flex-direction": "row",  
     "justify-content": "center",  # Centra el contenido verticalmente
     "width": "100%",  # Hace que ocupe todo el ancho
-    "height": "10vh",  # Hace que ocupe toda la altura de la ventana
+    "height": "15vh",  # Hace que ocupe toda la altura de la ventana
     "padding": "10px",
     "padding-bottom":"0px"
 }
 
-#estilo de "sobre mi"
+#estilo del cuadro de sobre mi 
 about_me_style = {
-    "padding":"20px",
-    "background-color":"#f0f0f0",
-    "text-align":"center" 
+    "background-image": "url('/fondo1.png')",  # Asegúrate de que la ruta sea correcta
+    "background-size": "cover",  # Asegura que la imagen cubra todo el contenedor
+    "height": "90vh",
+    "width": "100%"
 }
-   
-        
+
+#estilo del texto sobre mi
+about_me_text_style = dict (
+    text_align ="left",
+    padding="20px",
+)  
         

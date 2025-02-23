@@ -9,8 +9,7 @@ def content() -> rx.Component:
         rx.box(
                 rx.text("About Me", style={"font-size": "2em", "font-weight": "bold"}),
                 rx.text("Hi, I'm [Your Name]. I'm passionate about [Your Passion or Field]. I love working on projects that involve [Brief Description of What You Do]. In my free time, I enjoy [Your Hobbies or Interests]."),
-            style=styles.about_me_style
+            style=styles.about_me_text_style
             ),
-        
-        style={"gap": "20px"}  # Añade espacio entre los contenedores
+        style=styles.about_me_style
     )
