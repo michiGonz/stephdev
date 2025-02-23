@@ -61,23 +61,22 @@ button_body_styles = dict(
 
 #estilo del logo del navbar
 navbar_title_style = {
-    "font-size": "24px",
-    "font-weight": "bold",
-    "font-family": "'Helvetica Neue', Arial, sans-serif",
-    "text-align":"left",
-    "padding": "10px"
+   "background": "linear-gradient(to right, #b47ab2, #af07aa)",
+    "padding": "10px",
+    "text-align" : "center"
 }
+
 
 #estilo de los links en navbar
 navbar_link_style = {
-    "font-size": "16px",
-    "font-weight": "normal",
-    "font-family": "'Helvetica Neue', Arial, sans-serif",
-    "color": Color.PRIMARY.value,
+   "color": "white",
+   "text-align" : "center",
     "text-decoration": "none",
-    "text-align": "center",  # Centrar el texto de los enlaces
-    "display": "inline-block",  # Asegurar que el bloque de texto esté centrado
-    "width": "100px"  # Ajustar el ancho del enlace
+    "padding": "10px 10px",
+    "display": "inline-block",
+    "hover": {
+            "background-color" : "rgba(255, 255, 255, 0.2)",
+        }
 }
 
 #estilo del texto de la descripcion del banner
@@ -96,8 +95,8 @@ banner_container_style = dict (
     background_image = "url('/banner.png')",
     background_size = "cover",
     background_position = "center",
-    height = "50vh",
-    width = "100%"
+    height = "auto",
+    width = "100%",
     
 )
 
@@ -127,15 +126,16 @@ medium_container_style ={
 
 #estilo del cuadro de sobre mi 
 about_me_style = {
-    "background-image": "url('/fondo1.png')",  # Asegúrate de que la ruta sea correcta
+    "background-image": "url('/fondo1.png')", 
     "background-size": "cover",  # Asegura que la imagen cubra todo el contenedor
-    "height": "90vh",
-    "width": "100%"
+    "background-position": "center",  # Centra la imagen
+    "height": "50vh",  # Ocupa el 50% del alto de la ventana
+    "width": "100%",  # Ocupa todo el ancho
 }
 
 #estilo del texto sobre mi
 about_me_text_style = dict (
-    text_align ="left",
+    text_align ="rigth",
     padding="20px",
 )  
         
