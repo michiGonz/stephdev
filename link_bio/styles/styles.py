@@ -61,8 +61,8 @@ button_body_styles = dict(
 
 #estilo del logo del navbar
 navbar_title_style = {
-   "background": "linear-gradient(to right, #b47ab2, #af07aa)",
-    "padding": "10px",
+   "background": "linear-gradient(to right,rgb(206, 162, 204),rgb(59, 12, 58))",
+    "padding": "5px",
     "text-align" : "center"
 }
 
@@ -72,7 +72,7 @@ navbar_link_style = {
    "color": "white",
    "text-align" : "center",
     "text-decoration": "none",
-    "padding": "10px 10px",
+    "padding": "10px",
     "display": "inline-block",
     "hover": {
             "background-color" : "rgba(255, 255, 255, 0.2)",
@@ -129,7 +129,7 @@ about_me_style = {
     "background-image": "url('/fondo1.png')", 
     "background-size": "cover",  # Asegura que la imagen cubra todo el contenedor
     "background-position": "center",  # Centra la imagen
-    "height": "50vh",  # Ocupa el 50% del alto de la ventana
+    "height": "100vh",  # Ocupa el 50% del alto de la ventana
     "width": "100%",  # Ocupa todo el ancho
 }
 
