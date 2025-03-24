@@ -136,7 +136,49 @@ about_me_style = {
 
 #estilo del texto sobre mi
 about_me_text_style = dict (
-    text_align ="left",
+    text_align="right",
     padding="20px",
-)  
-        
+    white_space="pre-wrap"
+) 
+
+carousel_style = {
+    "width": "100%",
+    "height": "300px",
+    "display": "flex",
+    "overflow": "hidden",
+    "position": "relative",
+    "justify-content": "flex-end",
+    "margin": "20px 0"
+}
+
+# estilo de los elementos del carrusel
+carousel_item_style = {
+    "width": "200px",  # Ajusta el ancho del cuadrado
+    "height": "250px",  # Ajusta la altura del cuadrado
+    "transition": "transform 0.5s ease-in-out",
+    "text-align": "center",
+    "display": "flex",
+    "flex-direction": "column",
+    "align-items": "center",
+    "justify-content": "center",
+    "border": "1px solid #ccc",
+    "padding": "10px",
+    "box-sizing": "border-box"
+}
+# estilo de las imágenes del carrusel
+carousel_image_style = {
+    "width": "100%",  # Ajusta el ancho de la imagen
+    "height": "150px",  # Ajusta la altura de la imagen
+    "object-fit": "cover"  # Asegura que la imagen cubra el contenedor sin distorsionarse
+}
+
+# estilo de los enlaces del carrusel
+carousel_link_style = {
+    "color": "blue",
+    "text-decoration": "none",
+    "display": "block",
+    "margin-top": "10px"
+}
+
+
+

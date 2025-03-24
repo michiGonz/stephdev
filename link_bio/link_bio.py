@@ -25,15 +25,6 @@ def index()-> rx.Component:
             ),
         ),
          rx.center(
-            rx.vstack(
-                medium(),
-                height= "50%",  # Ajusta la altura del componente medium
-                width="100%",  # Asegúrate de que ocupe todo el ancho de la página
-                max_width="100%",
-                
-            ),
-         ),
-         rx.center(
              rx.vstack(
                 content(),
                 height= "50%",  # Ajusta la altura del componente medium
