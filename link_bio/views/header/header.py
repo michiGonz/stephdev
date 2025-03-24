@@ -18,7 +18,7 @@ def header() -> rx.Component:
             rx.hstack(
                 link_icon(
                     "https://github.com/michiGonz",
-                    "/icons/github.svg"      
+                    "/icons/github1.svg"      
                 ),
                 link_icon(
                     "https://linkedin.com/in/stephanie-gonzález-87303a1b6",
