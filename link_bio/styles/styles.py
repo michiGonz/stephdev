@@ -180,5 +180,11 @@ carousel_link_style = {
     "margin-top": "10px"
 }
 
-
+# estilo del contenedor de los iconos debajo del carrusel
+icon_container_style = {
+    "display": "flex",
+    "justify-content": "flex-end",
+    "margin-top": "10px",
+    "margin-right": "10px"
+}
 

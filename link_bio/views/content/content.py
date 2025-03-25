@@ -59,10 +59,10 @@ def content() -> rx.Component:
             style={"width": "100%"}
         ),
         rx.hstack(
-            rx.image(src="php.png", style={"width": "50px", "height": "50px"}),
-            rx.image(src="Py.jpg", style={"width": "50px", "height": "50px"}),
-            rx.image(src="R.png", style={"width": "50px", "height": "50px"}),
-            style={"justify-content": "flex-end", "margin-top": "10px", "margin-right": "10px"}  # Ajusta el margen según sea necesario
+            rx.image(src="php.png", style={"width": "60px", "height": "60px"}),
+            rx.image(src="python.jpg", style={"width": "60px", "height": "60px"}),
+            rx.image(src="laravel.png", style={"width": "60px", "height": "60px"}),
+            style=styles.icon_container_style
         ),
         style=styles.about_me_style 
     )
