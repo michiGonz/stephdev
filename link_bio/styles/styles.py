@@ -130,7 +130,7 @@ about_me_style = {
     "background-image": "url('/fondo1.png')", 
     "background-size": "cover",  # Asegura que la imagen cubra todo el contenedor
     "background-position": "center",  # Centra la imagen
-    "height": "100vh",  # Ocupa el 50% del alto de la ventana
+    "height": "120vh",  # Ocupa el 50% del alto de la ventana
     "width": "100%",  # Ocupa todo el ancho
 }
 
@@ -164,7 +164,6 @@ carousel_item_style = {
     "border": "1px solid #ccc",
     "padding": "10px",
     "box-sizing": "border-box",
-    "margin-bottom": "5px" 
 }
 # estilo de las imágenes del carrusel
 carousel_image_style = {
