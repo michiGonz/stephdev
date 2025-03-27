@@ -60,7 +60,7 @@ def content() -> rx.Component:
         ),
         rx.hstack(
             rx.image(src="php.png", style={"width": "60px", "height": "60px"}),
-            rx.image(src="python.jpg", style={"width": "60px", "height": "60px"}),
+            rx.image(src="python.png", style={"width": "60px", "height": "60px"}),
             rx.image(src="laravel.png", style={"width": "60px", "height": "60px"}),
             style=styles.icon_container_style
         ),

@@ -163,7 +163,8 @@ carousel_item_style = {
     "justify-content": "center",
     "border": "1px solid #ccc",
     "padding": "10px",
-    "box-sizing": "border-box"
+    "box-sizing": "border-box",
+    "margin-bottom": "5px" 
 }
 # estilo de las imágenes del carrusel
 carousel_image_style = {
@@ -182,9 +183,14 @@ carousel_link_style = {
 
 # estilo del contenedor de los iconos debajo del carrusel
 icon_container_style = {
+    "width": "100%",
+    "height": "300px",
     "display": "flex",
+    "overflow": "hidden",
+    "position": "relative",
     "justify-content": "flex-end",
-    "margin-top": "10px",
-    "margin-right": "10px"
+    "margin": "20px 0",
+    "object-fit": "cover"
+    
 }
 
