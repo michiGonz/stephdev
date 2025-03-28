@@ -143,7 +143,7 @@ about_me_text_style = dict (
 
 carousel_style = {
     "width": "100%",
-    "height": "300px",
+    "height": "255px",
     "display": "flex",
     "overflow": "hidden",
     "position": "relative",
@@ -163,6 +163,7 @@ carousel_item_style = {
     "justify-content": "center",
     "border": "1px solid #ccc",
     "padding": "10px",
+    "margin-right": "10px",
     "box-sizing": "border-box",
 }
 # estilo de las imágenes del carrusel

@@ -28,10 +28,6 @@ def header() -> rx.Component:
                     "https://x.com/stephdev",
                     "/icons/twitter.svg"
                 ),
-                link_icon(
-                    "https://x.com/stephdev",
-                    "/icons/twitter.svg"
-                ),
                 style={"gap": "10px","margin-left": "20px", "margin_left": "50px"}  # Añade espacio entre los iconos
             ),
         style=styles.banner_container_style,
