@@ -66,7 +66,7 @@ def content() -> rx.Component:
             rx.image(src="python.png", style={"width": "40px", "height": "40px"}),
             rx.image(src="laravel.png", style={"width": "40px", "height": "40px"}),
             rx.image(src="reflex.jpg", style={"width": "40px", "height": "40px"}),
-            rx.image(src="mysql.jpg", style={"width": "40px", "height": "40px","margin-right": "10px"}),
+            rx.image(src="mysql.png", style={"width": "40px", "height": "40px","margin-right": "10px"}),
             style=styles.icon_container_style
         ),
         style=styles.about_me_style 
