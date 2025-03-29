@@ -105,7 +105,7 @@ navbar_links_container_style = {
 navbar_link_style = {
     "color": "white",  # Color del texto
     "text-decoration": "none",  # Sin subrayado
-    "font-size": "16px",  # Tamaño de fuente
+    "font-size": "20px",  # Tamaño de fuente
     "font-weight": "bold",  # Negrita
     "padding": "5px 10px",  # Espaciado interno
     "border-radius": "5px",  # Bordes redondeados
@@ -122,7 +122,6 @@ banner_description_style = dict(
     font_family= "'Helvetica Neue', Arial, sans-serif",
     color="#eeeef3",
     margin_left = "60px",
-    margin_bottom= "0px"
     
 )
 
