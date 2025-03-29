@@ -18,12 +18,14 @@ def index()-> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
-                medium(),
                 width="100%",  # Asegúrate de que ocupe todo el ancho de la página
                 max_width="100%",
                 margin_y=Size.BIG.value
                
             ),
+        ),
+        rx.center(
+           medium(), 
         ),
          rx.center(
              rx.vstack(

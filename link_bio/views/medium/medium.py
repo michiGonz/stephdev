@@ -7,24 +7,10 @@ import link_bio.styles.styles as styles
 
 def medium() -> rx.Component:
     return rx.hstack(
-        rx.box(
-            rx.hstack(
-                link_icon(
-                    "https://github.com/michiGonz",
-                    
-                    "/icons/github1.svg"      
-                ),
-                link_icon(
-                    "https://linkedin.com/in/stephanie-gonzález-87303a1b6",
-                    "/icons/linkedin.svg"
-                ),
-                link_icon(
-                    "https://x.com/stephdev",
-                    "/icons/twitter.svg"
-                ),
-                style={"gap": "20px"}  # Añade espacio entre los iconos
-            ),
-            style={"display": "flex", "justify-content": "flex-end", "width": "100%", "padding" : "10px"}  # Alinea los iconos a la derecha
-        ),
+        rx.image(src="laravel.png", alt="laravel Icon", width="30px", height="30px"),
+        rx.image(src="mysql.png", alt="MySQL Icon", width="30px", height="30px"),        
+        rx.image(src="php.png", alt="php Icon", width="30px", height="30px"),
+        rx.image(src="reflex.jpg", alt="reflex Icon", width="30px", height="30px"),
+        rx.image(src="python.png", alt="python Icon", width="30px", height="30px"),
         style=styles.medium_container_style
     )

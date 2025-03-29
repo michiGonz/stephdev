@@ -110,18 +110,14 @@ medium_container = {
 
 #medium container style(estilo del elemento del medio(medium)
 medium_container_style ={
-    "background": "linear-gradient(to right,rgb(206, 162, 204),rgb(59, 12, 58))", #degradado
-    "padding": "5px",
-    "text-align" : "center",
-    "font-family": "'Helvetica Neue', Arial, sans-serif",
-    "font-weight": "bold",
+    "background": "linear-gradient(to right, rgb(206, 162, 204), rgb(59, 12, 58))",  # Degradado
+    "padding": "0px 10px",  # Ajusta el padding para eliminar el espacio superior
     "display": "flex",
-    "font-size": "14px",
-    "flex-direction": "row",  
-    "justify-content": "center",  # Centra el contenido verticalmente
-    "height": "15vh",  # Ocupa el 50% del alto de la ventana
-    "width": "100%",  # Ocupa todo el ancho
-    "padding-bottom":"0px",
+    "flex-direction": "row",
+    "justify-content": "flex-end",  # Alinea los íconos a la derecha
+    "align-items": "center",  # Centra los íconos verticalmente
+    "height": "10vh",  # Altura del contenedor
+    "width": "100%",  # Ancho completo
 }
 
 #estilo del cuadro de sobre mi 
