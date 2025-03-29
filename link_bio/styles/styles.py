@@ -76,23 +76,43 @@ button_body_styles = dict(
 
 
 #estilo del navbar
-navbar = {
-   "background": "linear-gradient(to right,rgb(206, 162, 204),rgb(59, 12, 58))",
-    "padding": "5px",
-    "text-align" : "center"
+navbar_style = {
+    "display": "flex",  # Usa flexbox
+    "align-items": "center",  # Alinea verticalmente
+    "justify-content": "space-between",  # Distribuye los elementos a los extremos
+    "width": "100%",  # Ocupa todo el ancho
+    "padding": "10px 20px",  # Espaciado interno
+    "position": "absolute",  # Posición absoluta dentro del header
+    "top": "0",  # Posición superior
+    "margin-bottom": "50px",  # Espacio debajo del navbar
+}
+
+# Estilo del logo
+navbar_logo_style = {
+    "width": "50px",  # Tamaño del logo
+    "height": "50px",  # Tamaño del logo
+    "object-fit": "contain",  # Asegura que no se distorsione
+}
+
+# Estilo del contenedor de los enlaces
+navbar_links_container_style = {
+    "display": "flex",  # Usa flexbox
+    "gap": "20px",  # Espaciado entre los enlaces
 }
 
 
-#estilo de los links en navbar
+# Estilo de los enlaces del navbar
 navbar_link_style = {
-   "color": "white",
-   "text-align" : "center",
-    "text-decoration": "none",
-    "padding": "10px",
-    "display": "inline-block",
-    "hover": {
-            "background-color" : "rgba(255, 255, 255, 0.2)",
-        }
+    "color": "white",  # Color del texto
+    "text-decoration": "none",  # Sin subrayado
+    "font-size": "16px",  # Tamaño de fuente
+    "font-weight": "bold",  # Negrita
+    "padding": "5px 10px",  # Espaciado interno
+    "border-radius": "5px",  # Bordes redondeados
+    "transition": "background-color 0.3s",  # Transición suave
+    "_hover": {
+        "background-color": "rgba(255, 255, 255, 0.2)",  # Fondo al pasar el mouse
+    },
 }
 
 #estilo del texto de la descripcion del banner
@@ -149,8 +169,9 @@ about_me_title_style = {
 #estilo del cuadro de sobre mi (content)
 about_me_style = {
     "background-image": "url('/about.png')", 
-    "background-size": "cover",  # Asegura que la imagen cubra todo el contenedor
-    "background-position": "center",  # Centra la imagen
+    "background-size": "cover", 
+    "background-position": "center",  
+    "background-attachment": "fixed",  
     "height": "60vh",  # Ocupa el 50% del alto de la ventana
     "width": "100%",  # Ocupa todo el ancho
 }

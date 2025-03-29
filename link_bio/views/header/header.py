@@ -10,6 +10,25 @@ import link_bio.styles.styles as styles
 
 def header() -> rx.Component:
     return rx.section(
+        # Navbar con logo y enlaces
+        rx.hstack(
+            # Logo en la esquina superior izquierda
+            rx.image(src="/logo.png", alt="Logo", style=styles.navbar_logo_style),
+            
+            # Enlaces del navbar en la esquina superior derecha
+            rx.hstack(
+                rx.link("Home", href="/", style=styles.navbar_link_style),
+                rx.link("About", href="#about-section", style=styles.navbar_link_style),
+                rx.link("Skills", href="#skills-section", style=styles.navbar_link_style),
+                rx.link("Contact", href="#contact-section", style=styles.navbar_link_style),
+                style=styles.navbar_links_container_style
+            ),
+            
+            justify="between",  # Distribuye los elementos a los extremos
+            align="center",  # Alinea verticalmente
+            style=styles.navbar_style  # Aplica el estilo general del navbar
+        ),
+        # Contenido del banner
         rx.text("Hi 👋", style=styles.banner_description_style),
         rx.text("I'm a", style=styles.banner_description_style),
         rx.text("Web Developer", style=styles.banner_description_style),
