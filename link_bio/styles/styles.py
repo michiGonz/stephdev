@@ -97,7 +97,6 @@ banner_container_style = dict (
     background_position = "center",
     height = "auto",
     width = "100%",
-    
 )
 
 #diseno del texto del medium container
@@ -120,9 +119,9 @@ medium_container_style ={
     "font-size": "14px",
     "flex-direction": "row",  
     "justify-content": "center",  # Centra el contenido verticalmente
-    "width": "100%",  # Hace que ocupe todo el ancho
-    "height": "15vh",  # Hace que ocupe toda la altura de la ventana
-    "padding-bottom":"0px"
+    "height": "15vh",  # Ocupa el 50% del alto de la ventana
+    "width": "100%",  # Ocupa todo el ancho
+    "padding-bottom":"0px",
 }
 
 #estilo del cuadro de sobre mi 

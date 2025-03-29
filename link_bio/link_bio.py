@@ -18,6 +18,7 @@ def index()-> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
+                medium(),
                 width="100%",  # Asegúrate de que ocupe todo el ancho de la página
                 max_width="100%",
                 margin_y=Size.BIG.value
@@ -52,9 +53,9 @@ app = rx.App(
 )
 app.add_page(
     index,
-    title="MichiDev | Mis Proyectos",
+    title="FefiDev | Mis Proyectos",
     description="Hola mi nombre es stef, soy ingeniero de software y aqui encontraras mi portafolio de proyectos",
-    image="/assets/logo.png"
+    image="logo.png"
     ),
 
 

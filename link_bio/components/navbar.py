@@ -6,10 +6,10 @@ import link_bio.styles.styles as styles
 
 def navbar() -> rx.Component:
     return rx.hstack(
-            rx.link("Home", href="#home", style=styles.navbar_link_style),
-            rx.link("About", href="#about", style=styles.navbar_link_style),
-            rx.link("Skills", href="#skills", style=styles.navbar_link_style),
-            rx.link("Projects", href="#projects", style=styles.navbar_link_style),
+            rx.link("About", href="/about", style=styles.navbar_link_style),
+            rx.link("Skills", href="/skills", style=styles.navbar_link_style),
+            rx.link("Projects", href="/content", style=styles.navbar_link_style),
+            rx.link("Header", href="/header", style=styles.navbar_link_style),  # Nueva ruta
             padding="20px",
             text_align="center",
         style=styles.navbar_title_style,
