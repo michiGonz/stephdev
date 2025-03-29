@@ -4,9 +4,24 @@ from .colors import Color as Color
 from .colors import TextColor as TextColor
 from .fonts import Font as Font
 
+STYLESHEETS = []
+
 #constants
 MAX_WIDTH="600px"
 
+#animaciones al archivo CSS global
+STYLESHEETS.append("""
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff; }
+    50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff; }
+    100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+""") 
 
 #sizes
 class Size(Enum):
@@ -25,6 +40,7 @@ STYLESHEETS =[
 BASE_STYLE ={
     "font_family": Font.DEFAULT.value, #fuente general
     "background_color": Color.BACKGROUND.value, #color de fondo general
+    "scroll_behavior": "smooth",  # Habilita el desplazamiento suave
     rx.button: {
         "width":"100%",
         "height":"100%",
@@ -59,8 +75,8 @@ button_body_styles = dict(
 )
 
 
-#estilo del logo del navbar
-navbar_title_style = {
+#estilo del navbar
+navbar = {
    "background": "linear-gradient(to right,rgb(206, 162, 204),rgb(59, 12, 58))",
     "padding": "5px",
     "text-align" : "center"
@@ -116,25 +132,42 @@ medium_container_style ={
     "flex-direction": "row",
     "justify-content": "flex-end",  # Alinea los íconos a la derecha
     "align-items": "center",  # Centra los íconos verticalmente
-    "height": "10vh",  # Altura del contenedor
+    "height": "9vh",  # Altura del contenedor
     "width": "100%",  # Ancho completo
 }
 
-#estilo del cuadro de sobre mi 
+# Estilo para el título "About Me"
+about_me_title_style = {
+    "color": "white",  # Color blanco
+    "font-size": "3em",  # Tamaño grande
+    "font-weight": "bold",  # Negrita
+    "text-align": "center",  # Centrado
+    "animation": "glow 1.5s infinite, fadeIn 3s",  # Efecto brillante y aparición progresiva
+    "margin": "0 auto",  # Centrado horizontal
+}
+
+#estilo del cuadro de sobre mi (content)
 about_me_style = {
-    "background-image": "url('/fondo1.png')", 
+    "background-image": "url('/about.png')", 
     "background-size": "cover",  # Asegura que la imagen cubra todo el contenedor
     "background-position": "center",  # Centra la imagen
-    "height": "120vh",  # Ocupa el 50% del alto de la ventana
+    "height": "60vh",  # Ocupa el 50% del alto de la ventana
     "width": "100%",  # Ocupa todo el ancho
 }
 
 #estilo del texto sobre mi
-about_me_text_style = dict (
-    text_align="right",
-    padding="20px",
-    white_space="pre-wrap"
-) 
+about_me_text_style = {
+    "text_align": "center",  # Centra el texto horizontalmente
+    "padding": "20px",  # Espaciado interno
+    "white_space": "pre-wrap",  # Mantiene los saltos de línea
+    "font-weight": "bold",  # Negrita
+    "color": "white",  # Color blanco
+    "display": "flex",  # Usa flexbox para centrar
+    "justify-content": "center",  # Centra horizontalmente
+    "align-items": "center",  # Centra verticalmente
+    "height": "100%",  # Asegura que ocupe todo el contenedor
+}
+   
 
 carousel_style = {
     "width": "100%",

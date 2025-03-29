@@ -13,8 +13,7 @@ def header() -> rx.Component:
         rx.text("Hi 👋", style=styles.banner_description_style),
         rx.text("I'm a", style=styles.banner_description_style),
         rx.text("Web Developer", style=styles.banner_description_style),
-        rx.text("I build things for web", style=styles.banner_description_style
-                ),
+        rx.text("I build things for web", style=styles.banner_description_style),
             rx.hstack(
                 link_icon(
                     "https://github.com/michiGonz",

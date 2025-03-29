@@ -12,5 +12,6 @@ def medium() -> rx.Component:
         rx.image(src="php.png", alt="php Icon", width="30px", height="30px"),
         rx.image(src="reflex.jpg", alt="reflex Icon", width="30px", height="30px"),
         rx.image(src="python.png", alt="python Icon", width="30px", height="30px"),
-        style=styles.medium_container_style
+        style=styles.medium_container_style,
+        id="medium-section"  # Agrega un id único al contenedor
     )

@@ -25,7 +25,7 @@ def index()-> rx.Component:
             ),
         ),
         rx.center(
-           medium(), 
+           #medium(), 
         ),
          rx.center(
              rx.vstack(
