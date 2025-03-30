@@ -145,7 +145,7 @@ medium_container = {
 
 #medium container style(estilo del elemento del medio(medium)
 medium_container_style ={
-    "background": "linear-gradient(to right, rgb(206, 162, 204), rgb(59, 12, 58))",  # Degradado
+    "background-color": "#000000",  # Degradado
     "padding": "0px 10px",  # Ajusta el padding para eliminar el espacio superior
     "display": "flex",
     "flex-direction": "row",
@@ -189,12 +189,9 @@ about_me_text_style = {
 }
    
 project_style = {
-    "background-image": "url('/fondo1.png')",
-    "background-size": "cover", 
-    "background-position": "center",  
+    "background-color": "#000000",
     "width": "100%",  # Ocupa todo el ancho
     "height": "60vh",  # Ocupa el 50% del alto de la ventana
-    
 }
 
 carousel_style = {
@@ -231,7 +228,7 @@ carousel_image_style = {
 
 # estilo de los enlaces del carrusel
 carousel_link_style = {
-    "color": "blue",
+    "color": "white",
     "text-decoration": "none",
     "display": "block",
     "margin-top": "10px"

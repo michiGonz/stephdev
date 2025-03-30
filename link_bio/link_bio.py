@@ -29,7 +29,6 @@ def index()-> rx.Component:
                 width="100%" # Asegúrate de que ocupe todo el ancho de la página
             ),
         ),
-         
          rx.center(
              rx.vstack(
                 content(),
@@ -40,7 +39,8 @@ def index()-> rx.Component:
          ),
         rx.center(
             rx.vstack(
-              project(),
+                
+                project(),
                 width="100%",
                
             ),  
