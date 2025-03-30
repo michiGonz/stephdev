@@ -1,7 +1,6 @@
 import reflex as rx
 from link_bio.components.link_icon import link_icon
 from link_bio.styles.styles import Size as Size
-from link_bio.components.info_text import info_text
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
 import link_bio.styles.styles as styles
@@ -18,7 +17,7 @@ def header() -> rx.Component:
                 rx.link("Home", href="/", style=styles.navbar_link_style),
                 rx.link("About", href="#about-section", style=styles.navbar_link_style),
                 rx.link("Skills", href="#skills-section", style=styles.navbar_link_style),
-                rx.link("Contact", href="#contact-section", style=styles.navbar_link_style),
+                rx.link("Projects", href="#project-section", style=styles.navbar_link_style),
                 style=styles.navbar_links_container_style
             ),
             justify="between", 

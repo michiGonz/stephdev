@@ -41,39 +41,7 @@ BASE_STYLE ={
     "font_family": Font.DEFAULT.value, #fuente general
     "background_color": Color.BACKGROUND.value, #color de fondo general
     "scroll_behavior": "smooth",  # Habilita el desplazamiento suave
-    rx.button: {
-        "width":"100%",
-        "height":"100%",
-        "display" :"block",
-        "padding": Size.SMALL.value,
-        "border_radius": "20px",
-        "color":TextColor.HEADER.value,
-        "background_color": Color.CONTENT.value,
-        "_hover": {
-          "background_color": Color.SECONDARY.value
-        }
-    },
-    rx.link: {
-        "text_decoration": "none",
-        "_hover": {}
-    }
 }
-title_style = dict(
-    padding_top="20px",
-    Color=TextColor.BODY.value,
-    width="100%"
-)
-
-button_title_styles = dict(
-    font_size=Size.SMALL.value,
-    color=TextColor.HEADER.value
-)
-
-button_body_styles = dict(
-    font_size= Size.BIG.value,
-     color=TextColor.BODY.value
-)
-
 
 #estilo del navbar
 navbar_style = {
@@ -105,7 +73,7 @@ navbar_links_container_style = {
 navbar_link_style = {
     "color": "white",  # Color del texto
     "text-decoration": "none",  # Sin subrayado
-    "font-size": "20px",  # Tamaño de fuente
+    "font-size": "15px",  # Tamaño de fuente
     "font-weight": "bold",  # Negrita
     "padding": "5px 10px",  # Espaciado interno
     "border-radius": "5px",  # Bordes redondeados

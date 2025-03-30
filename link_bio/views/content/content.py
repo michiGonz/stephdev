@@ -19,5 +19,6 @@ def content() -> rx.Component:
             ),
             style={"width": "100%"}  
         ),
-        style=styles.about_me_style 
+        style=styles.about_me_style,
+        id="about-section" #id único al contenedor
     )

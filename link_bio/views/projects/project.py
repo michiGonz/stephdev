@@ -52,5 +52,6 @@ def project() -> rx.Component:
             ),
             style={"width": "100%"}
         ),
-        style=styles.project_style  
+        style=styles.project_style, 
+        id="project-section"
     )
