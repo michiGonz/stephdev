@@ -6,7 +6,7 @@ import link_bio.styles.styles as styles
 
 def project() -> rx.Component:
     return rx.vstack(
-        # Título "Projects" centrado
+        # Título "Projects" 
         rx.text("Projects", style=styles.about_me_title_style),  # Aplica un nuevo estilo para centrar el título
 
         # Carrusel de proyectos
@@ -52,5 +52,5 @@ def project() -> rx.Component:
             ),
             style={"width": "100%"}
         ),
-        style=styles.project_style  # Aplica un estilo general para centrar todo
+        style=styles.project_style  
     )

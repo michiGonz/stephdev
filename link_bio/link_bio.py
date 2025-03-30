@@ -1,7 +1,6 @@
 import reflex as rx
 from link_bio.components.navbar import navbar
 from link_bio.views.header.header import header
-from link_bio.views.links.links import links
 from link_bio.components.footer import footer
 import link_bio.styles.styles as styles
 from link_bio.styles.styles import Size as Size
@@ -17,16 +16,15 @@ def index()-> rx.Component:
         rx.center(
             rx.vstack(
                 header(),
-                width="100%",  # Asegúrate de que ocupe todo el ancho de la página
+                width="100%",  # todo el ancho de la pagina
                 max_width="100%",
                 margin_y=Size.BIG.value
-               
             ),
         ),
         rx.center(
             rx.vstack(
                 medium(),
-                width="100%" # Asegúrate de que ocupe todo el ancho de la página
+                width="100%" # ancho de la página
             ),
         ),
          rx.center(
@@ -36,19 +34,17 @@ def index()-> rx.Component:
                 width="100%",  # Asegúrate de que ocupe todo el ancho de la página
                 max_width="100%",
             )
-         ),
+),
         rx.center(
             rx.vstack(
                 
                 project(),
                 width="100%",
-               
             ),  
         ),
-      
         footer()
     )
-     
+
     
 
 app = rx.App(

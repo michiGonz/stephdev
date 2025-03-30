@@ -7,7 +7,7 @@ import link_bio.styles.styles as styles
 def content() -> rx.Component:
     return rx.vstack(
         rx.box(
-           rx.text("About Me", style=styles.about_me_title_style),  # Aplica el nuevo estilo
+           rx.text("About Me", style=styles.about_me_title_style),  
             rx.text(
                 "Hi, My name is Stephanie Gonzalez, I am a freelance computer\n",
                 "scientist entrepreneur and technology lover.\n",
@@ -17,7 +17,7 @@ def content() -> rx.Component:
                 "I also perform these same tasks applied to backend design and development.\n",
                 style=styles.about_me_text_style
             ),
-            style={"width": "100%"}  # Asegura que el contenedor ocupe todo el ancho disponible
+            style={"width": "100%"}  
         ),
         style=styles.about_me_style 
     )

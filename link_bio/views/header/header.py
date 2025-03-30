@@ -21,9 +21,9 @@ def header() -> rx.Component:
                 rx.link("Contact", href="#contact-section", style=styles.navbar_link_style),
                 style=styles.navbar_links_container_style
             ),
-            justify="between",  # Distribuye los elementos a los extremos
-            align="center",  # Alinea verticalmente
-            style=styles.navbar_style  # Aplica el estilo general del navbar
+            justify="between", 
+            align="center",  
+            style=styles.navbar_style  
         ),
         
         # Contenido del banner
