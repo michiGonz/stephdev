@@ -8,13 +8,12 @@ from link_bio.styles.styles import Size as Size
 from link_bio.views.sponsors.sponsor import sponsor
 from link_bio.views.medium.medium import medium
 from link_bio.views.content.content import content
-
+from link_bio.views.projects.project import project
 class State(rx.State):
     pass
 
 def index()-> rx.Component:
     return rx.box(
-       
         rx.center(
             rx.vstack(
                 header(),
@@ -25,8 +24,12 @@ def index()-> rx.Component:
             ),
         ),
         rx.center(
-           medium(), 
+            rx.vstack(
+                medium(),
+                width="100%" # Asegúrate de que ocupe todo el ancho de la página
+            ),
         ),
+         
          rx.center(
              rx.vstack(
                 content(),
@@ -37,10 +40,9 @@ def index()-> rx.Component:
          ),
         rx.center(
             rx.vstack(
-              links(),
-                max_width=styles.MAX_WIDTH,
+              project(),
                 width="100%",
-                margin_y=Size.BIG.value
+               
             ),  
         ),
       

@@ -188,6 +188,14 @@ about_me_text_style = {
     "height": "100%",  # Asegura que ocupe todo el contenedor
 }
    
+project_style = {
+    "background-image": "url('/fondo1.png')",
+    "background-size": "cover", 
+    "background-position": "center",  
+    "width": "100%",  # Ocupa todo el ancho
+    "height": "60vh",  # Ocupa el 50% del alto de la ventana
+    
+}
 
 carousel_style = {
     "width": "100%",

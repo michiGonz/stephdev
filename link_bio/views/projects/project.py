@@ -8,6 +8,7 @@ def project() -> rx.Component:
     return  rx.vstack(
     rx.box(
             rx.hstack(
+                rx.text("Projects", style=styles.about_me_title_style),  # Aplica el nuevo estilo
                 rx.box(
                     rx.image(src="foto1.png", style=styles.carousel_image_style),
                     rx.link(
@@ -48,4 +49,5 @@ def project() -> rx.Component:
             ),
             style={"width": "100%"}
         ),
+        style=styles.project_style
     )
