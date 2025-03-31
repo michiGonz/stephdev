@@ -3,3 +3,4 @@
 __pycache__/
 assets/external/
 *.db
+.env
