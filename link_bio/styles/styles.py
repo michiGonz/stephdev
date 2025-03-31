@@ -16,7 +16,9 @@ STYLESHEETS.append("""
     50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff; }
     100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff; }
 }
-
+html {
+    scroll-behavior: smooth;  /* Habilita el desplazamiento suave */
+}
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
@@ -163,30 +165,28 @@ project_style = {
 }
 
 carousel_style = {
-    "width": "100%",
-    "height": "255px",
-    "display": "flex",
-    "overflow": "hidden",
-    "position": "relative",
-    "justify-content": "flex-end",
-    "margin": "20px 0"
+    "display": "flex",  # Usa flexbox
+    "justify-content": "center",  # Centra horizontalmente
+    "align-items": "center",  # Centra verticalmente
+    "width": "100%",  # Ocupa todo el ancho
+    "height": "255px",  # Altura del carrusel
+    "margin": "20px 0",  # Espaciado superior e inferior
 }
 
 # estilo de los elementos del carrusel
 carousel_item_style = {
     "width": "200px",  # Ajusta el ancho del cuadrado
     "height": "250px",  # Ajusta la altura del cuadrado
-    "transition": "transform 0.5s ease-in-out",
-    "text-align": "center",
-    "display": "flex",
-    "flex-direction": "column",
-    "align-items": "center",
-    "justify-content": "center",
-    "border": "1px solid #ccc",
-    "padding": "10px",
-    "margin-right": "10px",
-    "box-sizing": "border-box",
+    "display": "flex",  # Usa flexbox
+    "flex-direction": "column",  # Organiza los elementos en columna
+    "align-items": "center",  # Centra horizontalmente
+    "justify-content": "center",  # Centra verticalmente
+    "border": "1px solid #ccc",  # Borde del elemento
+    "padding": "10px",  # Espaciado interno
+    "margin-right": "10px",  # Espaciado entre elementos
+    "box-sizing": "border-box",  # Incluye padding y borde en el tamaño total
 }
+
 # estilo de las imágenes del carrusel
 carousel_image_style = {
     "width": "100%",  # Ajusta el ancho de la imagen
