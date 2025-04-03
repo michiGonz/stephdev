@@ -1,59 +1,45 @@
-import reflex as rx
+from flask import Flask, request, jsonify
 import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from dotenv import load_dotenv
-import os
 
-# Cargar las variables del archivo .env
-load_dotenv()
+app = Flask(__name__)
 
-# Obtener las credenciales del archivo .env
-SENDER_EMAIL = os.getenv("EMAIL_USER")
-RECEIVER_EMAIL = os.getenv("EMAIL_RECEIVER")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+# Ruta GET para comprobar que el servidor esté activo.
+@app.route("/", methods=["GET"])
+def index():
+    return "El backend está corriendo correctamente. Utiliza el endpoint /submit para enviar datos."
 
-# Función para manejar el envío del mensaje
-def send_message(name: str, email: str, message: str):
+# Ruta POST para procesar el formulario y enviar el correo.
+@app.route("/submit", methods=["POST"])
+def submit():
+    # Recupera los datos enviados en formato JSON.
+    data = request.json
+    name = data.get("name")
+    email = data.get("email")
+    message = data.get("message")
+    
     try:
-        # Configurar el mensaje de correo
-        msg = MIMEMultipart()
-        msg["From"] = SENDER_EMAIL
-        msg["To"] = RECEIVER_EMAIL
-        msg["Subject"] = "Nuevo mensaje desde el formulario"
-
-        # Contenido del correo
-        body = f"""
-        Has recibido un nuevo mensaje:
-        Nombre: {name}
-        Correo: {email}
-        Mensaje: {message}
-        """
-        msg.attach(MIMEText(body, "plain"))
-
-        # Enviar el correo usando SMTP
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
-            server.starttls()
-            server.login(SENDER_EMAIL, EMAIL_PASSWORD)
-            server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, msg.as_string())
-
-        return rx.alert("Mensaje enviado correctamente.", status="success")
+        # Configura la conexión SMTP.
+        # En este ejemplo se usa Gmail; asegúrate de tener configurada la verificación en dos pasos y usar una contraseña de aplicación.
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        # Cambia 'tu_correo@gmail.com' y 'tu_contraseña' por tus credenciales reales.
+        server.login("stephaniemgonzalez10@gmail.com", "bfepesrcfpdtwsos")
+        
+        # Prepara el mensaje de correo.
+        subject = "Nuevo mensaje del formulario"
+        body = f"Nombre: {name}\nCorreo: {email}\nMensaje: {message}"
+        email_message = f"Subject: {subject}\n\n{body}"
+        
+        # Envía el correo:
+        # - El primer parámetro es el correo del remitente (debe ser el mismo que usas para loguearte).
+        # - El segundo parámetro es el correo de destino (puede ser una lista de correos).
+        server.sendmail("stephaniemgonzalez10@gmail.com", "fefigonzalez610@gmail.com", email_message)
+        server.quit()
+        
+        return jsonify({"message": "Correo enviado correctamente."})
     except Exception as e:
-        return rx.alert(f"Error al enviar el mensaje: {e}", status="error")
+        # En caso de error, devuelve una respuesta JSON con el mensaje de error.
+        return jsonify({"error": str(e)}), 500
 
-# Define la aplicación Reflex
-app = rx.App()
-
-@app.route("/send_message", methods=["POST"])
-def handle_form_submission(request):
-    # Obtener los datos enviados desde el formulario
-    name = request.form.get("name")
-    email = request.form.get("email")
-    message = request.form.get("message")
-
-    # Llamar a la función para enviar el correo
-    return send_message(name, email, message)
-
-# Agregar la página del footer
-app.add_page("footer", route="/")
-app.compile()
+if __name__ == "__main__":
+    app.run(debug=True)

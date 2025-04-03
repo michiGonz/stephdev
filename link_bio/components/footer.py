@@ -1,131 +1,99 @@
 import reflex as rx
-from link_bio.styles.styles import Size as Size
-import datetime
+import requests
 
-# Define el componente del footer
-def footer() -> rx.Component:
-    return rx.hstack(
-        # Información de redes sociales y texto
+class FormState(rx.State):
+    # Variables para guardar los datos del formulario.
+    name: str = ""
+    email: str = ""
+    message: str = ""
+    feedback: str = ""  # Variable para la retroalimentación visual.
+
+    # Método para enviar el formulario al backend Flask.
+    def enviar_formulario(self):
+        datos = {
+            "name": self.name,
+            "email": self.email,
+            "message": self.message,
+        }
+        try:
+            response = requests.post("http://127.0.0.1:5000/submit", json=datos)
+            if response.status_code == 200:
+                # Usa el mensaje devuelto o un mensaje por defecto.
+                self.feedback = response.json().get("message", "Correo enviado correctamente.")
+            else:
+                self.feedback = f"Error al enviar el formulario: {response.status_code}"
+        except Exception as e:
+            self.feedback = f"Hubo un error: {e}"
+
+def FormFooter():
+    return rx.box(
         rx.box(
-            rx.image(src="logo.png", height="50px", margin_bottom="20px"),
-            rx.link(
-                f"© 2014-{datetime.date.today().year} SGDev by Steph G v1.",
-                href="https://moure.dev/",
-                is_external=True,
-                font_size=Size.SMALL.value,
-                margin_bottom="10px",
-                style={"color": "#aaa", "text-decoration": "none"}
+            rx.text("Nombre:", style={"color": "white", "margin-bottom": "5px"}),
+            rx.input(
+                on_change=FormState.set_name,  # Actualiza el estado directamente.
+                placeholder="Tu nombre",
+                style={
+                    "padding": "10px",
+                    "border-radius": "5px",
+                    "margin-bottom": "15px",
+                    "width": "100%",
+                }
             ),
+            rx.text("Correo:", style={"color": "white", "margin-bottom": "5px"}),
+            rx.input(
+                type="email",
+                on_change=FormState.set_email,  # Actualiza el estado directamente.
+                placeholder="Tu correo",
+                style={
+                    "padding": "10px",
+                    "border-radius": "5px",
+                    "margin-bottom": "15px",
+                    "width": "100%",
+                }
+            ),
+            rx.text("Mensaje:", style={"color": "white", "margin-bottom": "5px"}),
+            rx.text_area(
+                on_change=FormState.set_message,  # Actualiza el estado directamente.
+                placeholder="Escribe tu mensaje",
+                style={
+                    "padding": "10px",
+                    "border-radius": "5px",
+                    "margin-bottom": "15px",
+                    "width": "100%",
+                }
+            ),
+            rx.button(
+                "Enviar",
+                on_click=FormState.enviar_formulario,  # Llama al método de la clase FormState.
+                style={
+                    "background-color": "#7B4ABF",
+                    "color": "white",
+                    "border": "none",
+                    "padding": "10px 20px",
+                    "border-radius": "5px",
+                    "cursor": "pointer",
+                    "margin-top": "10px",
+                },
+                hover={"background-color": "#9D65DB"}
+            ),
+            # Aquí se muestra el mensaje de retroalimentación.
             rx.text(
-                "BUILDING SOFTWARE WITH ♥ FROM GALICIA TO THE WORLD.",
-                font_size=Size.SMALL.value,
-                margin_bottom="20px",
-                style={"color": "#aaa"}
-            ),
-            rx.hstack(
-                rx.link(
-                    rx.image(src="/icons/github.svg", height="30px"),
-                    href="https://github.com/michiGonz",
-                    is_external=True,
-                    style={"margin": "0 10px"}
-                ),
-                rx.link(
-                    rx.image(src="/icons/linkedin.svg", height="30px"),
-                    href="https://linkedin.com/in/stephanie-gonzález-87303a1b6",
-                    is_external=True,
-                    style={"margin": "0 10px"}
-                ),
-                rx.link(
-                    rx.image(src="/icons/twitter.svg", height="30px"),
-                    href="https://x.com/stephdev",
-                    is_external=True,
-                    style={"margin": "0 10px"}
-                ),
-                style={"justify-content": "center", "gap": "15px"}
+                FormState.feedback,
+                style={"margin-top": "20px", "color": "white", "font-weight": "bold"}
             ),
             style={
-                "width": "50%",
+                "max-width": "400px",
+                "margin": "20px auto",
                 "padding": "20px",
+                "background-color": "#5D3FD3",
+                "border-radius": "10px",
+                "color": "white",
                 "text-align": "center",
-                "color": "white"
             }
         ),
-        # Formulario para enviar un mensaje
-        rx.box(
-            rx.text(
-                "Envíanos un mensaje",
-                font_size=Size.LARGE.value,
-                margin_bottom="20px",
-                style={"color": "white", "font-weight": "bold"}
-            ),
-            rx.form(
-                rx.input(
-                    placeholder="Tu nombre",
-                    name="name",
-                    style={
-                        "width": "100%",
-                        "margin-bottom": "15px",
-                        "padding": "10px",
-                        "border": "1px solid #555",
-                        "border-radius": "5px",
-                        "background-color": "#444",
-                        "color": "white"
-                    }
-                ),
-                rx.input(
-                    placeholder="Tu correo electrónico",
-                    name="email",
-                    type="email",
-                    style={
-                        "width": "100%",
-                        "margin-bottom": "15px",
-                        "padding": "10px",
-                        "border": "1px solid #555",
-                        "border-radius": "5px",
-                        "background-color": "#444",
-                        "color": "white"
-                    }
-                ),
-                rx.text_area(
-                    placeholder="Escribe tu mensaje aquí...",
-                    name="message",
-                    style={
-                        "width": "100%",
-                        "margin-bottom": "15px",
-                        "padding": "10px",
-                        "border": "1px solid #555",
-                        "border-radius": "5px",
-                        "background-color": "#444",
-                        "color": "white",
-                        "min-height": "100px"
-                    }
-                ),
-                rx.button(
-                    "Enviar",
-                    type="submit",
-                    style={
-                        "background-color": "#555",
-                        "color": "white",
-                        "padding": "10px 20px",
-                        "border": "none",
-                        "border-radius": "5px",
-                        "cursor": "pointer",
-                        "font-weight": "bold"
-                    },
-                    hover_style={
-                        "background-color": "#777"
-                    }
-                ),
-                action="/send_message",  # Ruta para manejar el envío del mensaje
-                method="post",
-                style={"width": "100%", "margin-top": "20px"}
-            ),
-            style={
-                "width": "50%",
-                "padding": "20px",
-                "text-align": "center",
-                "background-color": "#222",
-                "border-radius": "10px"
-            }
-        ),
-        align_items="center",        justify_content="space-between",        width="100%",        padding="40px",        style={"background-color": "#333", "color": "white"}    )
+        style={
+            "background-color": "#1F1B24",
+            "padding": "40px",
+            "color": "white",
+        }
+    )
